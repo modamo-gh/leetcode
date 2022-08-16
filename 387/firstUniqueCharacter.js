@@ -2,11 +2,13 @@ const firstUniqueCharacter = (string) => {
     const letterFrequencies = {};
 
     for(let i = 0; i < string.length; i++){
-        if(letterFrequencies.hasOwnProperty(string.charAt(i))){
-            letterFrequencies[`${string.charAt(i)}`]++;
+        const currentLetter = string.charAt(i);
+        
+        if(letterFrequencies.hasOwnProperty(currentLetter)){
+            letterFrequencies[`${currentLetter}`]++;
         }
         else{
-            letterFrequencies[`${string.charAt(i)}`] = 1;
+            letterFrequencies[`${currentLetter}`] = 1;
         }
     }
 
